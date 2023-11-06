@@ -1,0 +1,19 @@
+def main ():
+    write_to_file("testfile.txt", "Hello, World!")
+    print(read_from_file("testfile.txt"))
+
+
+def write_to_file(filename, data):
+    with open(filename, mode ='w') as f:
+        f.write(data + "\r\n")
+
+def read_from_file(filename):
+    file_data=""
+    with open(filename, mode='r') as f:
+        file_data = f.read()
+    return file_data
+
+
+
+if __name__ == "__main__":
+    main()
